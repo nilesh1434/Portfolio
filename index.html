@@ -161,38 +161,32 @@
                 <img src="Images/work7.jpg">
                 <div class="layer">
                     <h3>Car Freakz</h3>
-                    <p>An app similar to Netflix, Amazon Prime Video, Hulu and Showtime where you can browse through all kinds 
-                        of movies and learn more about them!</p><br><br>
+                    <p>An app which has all-in-one feature and can provide the user with any information about the car, be it top speed, 
+                        model-make year, specifications, horsepower, etc. It also improves knowledge and enthusiasm in the user for cars!
+                    </p><br><br>
                     <p><h3>Languages and Frameworks</h3></p>
-                    <p>Android Studio, Dart, Flutter, Kotlin, Java</p>
-                    <a href="https://github.com/nilesh1434/Movies-App" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="Images/work3.jpg">
-                <div class="layer">
-                    <h3>Movies App</h3>
-                    <p>An app similar to Netflix, Amazon Prime Video, Hulu and Showtime where you can browse through all kinds 
-                        of movies and learn more about them!</p><br><br>
-                    <p><h3>Languages and Frameworks</h3></p>
-                    <p>Android Studio, Dart, Flutter, Kotlin, Java</p>
-                    <a href="https://github.com/nilesh1434/Movies-App" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="Images/work3.jpg">
-                <div class="layer">
-                    <h3>Movies App</h3>
-                    <p>An app similar to Netflix, Amazon Prime Video, Hulu and Showtime where you can browse through all kinds 
-                        of movies and learn more about them!</p><br><br>
-                    <p><h3>Languages and Frameworks</h3></p>
-                    <p>Android Studio, Dart, Flutter, Kotlin, Java</p>
-                    <a href="https://github.com/nilesh1434/Movies-App" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <p>Android Studio, Dart, Flutter, Kotlin, Java, C++</p>
+                    <a href="https://github.com/nilesh1434/CarFreakz-App" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
-        <!-- <button class="btn">See More</button> -->
-        <a href="#" class="btn">See more</a>
+        <div id="see-more">See More</div>
+        <script>
+            let seeMoreBtn = document.querySelector('#see-more');
+            let currentItem = 3;
+
+            seeMoreBtn.onclick = () => {
+                let boxes = [...document.querySelectorAll('.container .work-list .work')];
+                for (var i = currentItem; i < currentItem +3; i++){
+                    boxes[i].style.display = 'inline-block';
+                }
+                currentItem += 3;
+
+                if(currentItem >= boxes.length){
+                    seeMoreBtn.style.display = 'none';
+                }
+            }
+        </script>
     </div>
 </div>
 
