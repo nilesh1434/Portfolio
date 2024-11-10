@@ -13,13 +13,15 @@
     <div class="container">
         <nav>
             <img src="Images/logo.png" class="logo">
-            <ul>
+            <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#project">Projects</a></li>
                 <li><a href="#skill">Languages and Frameworks</a></li>
                 <li><a href="#contact">Get In Touch</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>Full-Stack Developer</p>
@@ -37,7 +39,7 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>As an organized and self-driven Software Engineer with 3+ years of work experience, 
+                <p>As an organized and self-driven Software Engineer with 2 years of work experience, 
                     I look forward to acquiring the requisite skill sets to professionally contribute in 
                     the field of computer application. My interest lies in artificial intelligence and 
                     data structures applications. My core competence lies in logical problem solving and 
@@ -344,12 +346,13 @@
                 <a href="Images/FrontEnd Software Engineer Resume.pdf" target="_blank" download class="btn btn2">Download Resume</a>
             </div>
             <div class="contact-right">
-                <form>
+                <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="text" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
+                <span id="msg"></span>
             </div>
         </div>
     </div>
@@ -373,5 +376,36 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 </script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwewHYERFontlQyagbFZ68ZKTqJ_WVf6wzPVSlT0yxDoM3iCH2PWZj4-VQdDU3Oph4FYQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully! Thank you!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },8000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
 </body>
 </html>
