@@ -20,6 +20,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#project">Projects</a></li>
                 <li><a href="#skill">Languages and Frameworks</a></li>
+                <!-- <li><a href="#project">My Passion</a></li> -->
                 <li><a href="#contact">Get In Touch</a></li>
                 <li><div class="social-icons">
                     <a href="https://www.linkedin.com/in/nilesh-jain1434/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -53,7 +54,7 @@
                     data structures applications. My core competence lies in logical problem solving and 
                     cognitive analysis in computer application. With the experience and exposure provided 
                     by the ROTC program, these faculties have further been honed leading to effective soft 
-                    skills development. <span id="dots">...</span><br><br>
+                    skills development. <span id="dots"> </span><br><br>
 
                     <span id = "more">I'm an experienced professional specializing in full-stack development, firmware development, 
                     microcontrollers, C/C++ programming and Python automation. I'm passionate about delivering 
@@ -75,16 +76,18 @@
                             if (dots.style.display === "none") {
                             dots.style.display = "inline";
                             readMoreBtn.innerHTML = "Read More";
-                            moreText.style.display = "none";
+                            // moreText.style.display = "none";
+                            moreText.classList.remove("show");
+                            setTimeout(() => (moreText.style.display ="none"), 500);
                             } 
                             else {
                                 dots.style.display = "none";
                                 readMoreBtn.innerHTML = "Read Less";
-                                moreText.style.display = "inline";
+                                // moreText.style.display = "inline";
+                                moreText.style.display = "block";
+                                setTimeout(() => moreText.classList.add("show"), 10);
                             }
                         }
-            
-                        
                     </script>
 
                     <div class="tab-titles">
@@ -94,22 +97,22 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
-                            <li><span>Web Development</span><br>Web Application Development</li>
-                            <li><span>App Development</span><br>Building User-Friendly Android Applications</li>
+                            <li><span><b>UI/UX</b></span><br>Designing Web/App Interfaces</li>
+                            <li><span><b>Web Development</b></span><br>Web Application Development</li>
+                            <li><span><b>App Development</b></span><br>Building User-Friendly Android Applications</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>January 2023 - July 2024</span><br>Software Engineer at Software Programming Group America LLC.</li>
-                            <li><span>June 2021 - May 2022</span><br>Mathematics Learning Assistant at University of Illinois, Chicago.</li>
-                            <li><span>May 2021 - August 2022</span><br>Peer Success Coach at University of Illinois, Chicago.</li>
-                            <li><span>August 2019 - May 2022</span><br>US Army ROTC Cadet at University of Illinois, Chicago.</li>
+                            <li><span><b>January 2023 - July 2024</b></span><br>Software Engineer at Software Programming Group America LLC.</li>
+                            <li><span><b>June 2021 - May 2022</b></span><br>Mathematics Learning Assistant at University of Illinois, Chicago.</li>
+                            <li><span><b>May 2021 - August 2022</b></span><br>Peer Success Coach at University of Illinois, Chicago.</li>
+                            <li><span><b>August 2019 - May 2022</b></span><br>US Army ROTC Cadet at University of Illinois, Chicago.</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2019 - 2023</span><br>BS in Computer Science from University of Illinois at Chicago (Honors College)<br>Minor in Mathematics</li>
+                            <li><span><b>2019 - 2023</b></span><br>BS in Computer Science from University of Illinois at Chicago (Honors College)<br>Minor in Mathematics</li>
                         </ul>
                     </div>
             </div>
@@ -385,7 +388,7 @@
                     <a href="https://github.com/nilesh1434" target="_blank"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.instagram.com/nilesh_jain1434/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
                 </div> -->
-                <a href="Images/FrontEnd Software Engineer Resume.pdf" target="_blank" class="btn btn2">View Resume</a>
+                <a href="Images/FrontEnd Software Engineer Resume.pdf" target="_blank" class="btn btn3">Resume</a>
                 <!-- <a href="Images/FrontEnd Software Engineer Resume.pdf" download class="btn btn2">Download Resume</a> -->
             </div>
             <div class="contact-right">

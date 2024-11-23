@@ -93,6 +93,16 @@ nav ul li a:hover::after{
 
 #more{
     display: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+}
+
+#more.show{
+    display: block;
+    opacity: 1;
+    max-height: 500px;
 }
 
 #read-more{
@@ -185,7 +195,7 @@ nav ul li a:hover::after{
 
 /*-----------------Project----------------*/
 #project{
-    /* padding: 20px 0; */
+    padding: 50px 0;
 }
 
 .work-list{
@@ -200,6 +210,16 @@ nav ul li a:hover::after{
     position: relative;
     overflow: hidden;
     display: none;
+    /* opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease; */
+}
+
+.work.show{
+    display: block;
+    opacity: 1;
+    max-height: 200px;
 }
 
 .work:nth-child(1), .work:nth-child(2), .work:nth-child(3){
@@ -292,7 +312,7 @@ nav ul li a:hover::after{
 
 /*--------------Skill---------------*/
 #skill{
-    /* padding: 50px 0; */
+    padding: 50px 0;
 }
 
 .skill-list{
@@ -366,6 +386,13 @@ nav ul li a:hover::after{
     /* width:min-content; */
     display: inline-block;
     background: #ff004f;
+    display: flex;
+}
+
+.btn3{
+    text-align: center;
+    display: inline-block;
+    background: #ff004f;
 }
 
 .contact-left form{
@@ -389,6 +416,11 @@ form .btn2{
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+#msg {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .copyright{
