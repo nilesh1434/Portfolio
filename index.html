@@ -13,12 +13,20 @@
     <div class="container">
         <nav>
             <img src="Images/logo.png" class="logo">
+            
             <ul id="sidemenu">
+                
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#project">Projects</a></li>
                 <li><a href="#skill">Languages and Frameworks</a></li>
                 <li><a href="#contact">Get In Touch</a></li>
+                <li><div class="social-icons">
+                    <a href="https://www.linkedin.com/in/nilesh-jain1434/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/nilesh1434" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/nilesh_jain1434/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+                </li>
                 <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -45,21 +53,44 @@
                     data structures applications. My core competence lies in logical problem solving and 
                     cognitive analysis in computer application. With the experience and exposure provided 
                     by the ROTC program, these faculties have further been honed leading to effective soft 
-                    skills development. <br><br>
+                    skills development. <span id="dots">...</span><br><br>
 
-                    I'm an experienced professional specializing in full-stack development, firmware development, 
+                    <span id = "more">I'm an experienced professional specializing in full-stack development, firmware development, 
                     microcontrollers, C/C++ programming and Python automation. I'm passionate about delivering 
                     high-quality solutions and driving innovation in the field of full-stack development. <br><br>
                     
                     I visualize myself working in advanced areas of research and application of computers, 
                     artificial intelligence and data structures in developing programs which would make our lives 
                     easier and safer. Applications in robotics, medicine, crime control and transport are areas 
-                    which I look forward to working in.</p>
+                    which I look forward to working in.</span></p>
+
+                    <div id="read-more">Read More</div>
+
+                    <script>
+                        let readMoreBtn = document.querySelector('#read-more');
+                        var dots = document.getElementById("dots");
+                        var moreText = document.getElementById("more");
+                        
+                        readMoreBtn.onclick = () => {
+                            if (dots.style.display === "none") {
+                            dots.style.display = "inline";
+                            readMoreBtn.innerHTML = "Read More";
+                            moreText.style.display = "none";
+                            } 
+                            else {
+                                dots.style.display = "none";
+                                readMoreBtn.innerHTML = "Read Less";
+                                moreText.style.display = "inline";
+                            }
+                        }
+            
+                        
+                    </script>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p style="font-weight: bold;" class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p style="font-weight: bold;" class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p style="font-weight: bold;" class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
@@ -91,6 +122,17 @@
     <div class="container">
         <h1 class="sub-title">Projects</h1>
         <div class="work-list">
+            <div class="work">
+                <img src="Images/work8.jpg">
+                <div class="layer">
+                    <h3>Sign Language to Text Converter</h3>
+                    <p>A real-time Convolution Neural Network method for American Sign Language to Text Conversion which automatically 
+                        recognizes human gesture from images captured by a camera to assist hearing impaired people!</p><br><br>
+                    <p><h3>Languages and Frameworks</h3></p>
+                    <p>Python, Tensorflow, CV Zone, Mediapipe, Google Teachable Machine</p>
+                    <a href="https://github.com/nilesh1434/Sign-Language-to-Text-Converter" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
             <div class="work">
                 <img src="Images/work1.png">
                 <div class="layer">
@@ -336,14 +378,15 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Get In Touch</h1>
-                <p><i class="fa-solid fa-paper-plane"></i><a href="mailto:jain.nilesh1203@gmail.com"> jain.nilesh1203@gmail.com</a></p>
-                <p><i class="fa-solid fa-phone"></i> +91 93115-51884</p>
-                <div class="social-icons">
+                <p><i class="fa-solid fa-paper-plane"></i><a href="mailto:jain.nilesh1203@gmail.com" style="color: white;"> jain.nilesh1203@gmail.com</a></p>
+                <p style="color: white;"><i class="fa-solid fa-phone" ></i> +91 93115-51884</p>
+                <!-- <div class="social-icons">
                     <a href="https://www.linkedin.com/in/nilesh-jain1434/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://github.com/nilesh1434" target="_blank"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.instagram.com/nilesh_jain1434/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                </div>
-                <a href="Images/FrontEnd Software Engineer Resume.pdf" target="_blank" download class="btn btn2">Download Resume</a>
+                </div> -->
+                <a href="Images/FrontEnd Software Engineer Resume.pdf" target="_blank" class="btn btn2">View Resume</a>
+                <!-- <a href="Images/FrontEnd Software Engineer Resume.pdf" download class="btn btn2">Download Resume</a> -->
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
