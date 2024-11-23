@@ -7,6 +7,7 @@
     <title>Nilesh Jain Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/dace54c71c.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 <body>
 <div id="header">
@@ -33,7 +34,16 @@
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-            <p>Full-Stack Developer</p>
+            <p><span class="profession"></span></p>
+            <script>
+                var typed = new Typed(".profession", {
+                    strings:["Full-Stack Developer", "Mathematician", "Indian Classical Music Singer", "Tabla Maestro"],
+                    typeSpeed:80,
+                    backSpeed:80,
+                    backDelay:1000,
+                    loop:true
+                })
+            </script>
             <h1>Hello,<br> I'm <span>Nilesh Jain</span></h1></div></h1>
         </div>
     </div>
@@ -89,7 +99,7 @@
                             }
                         }
                     </script>
-
+                    
                     <div class="tab-titles">
                         <p style="font-weight: bold;" class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p style="font-weight: bold;" class="tab-links" onclick="opentab('experience')">Experience</p>
