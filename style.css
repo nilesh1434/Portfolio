@@ -38,10 +38,14 @@ nav{
     width: 90%;
     margin-top: -10px;
     z-index: 1;
+    opacity: 0;
+    animation: slideTop 0.5s ease forwards;
 }
 
 .logo{
     width: 140px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
 }
 
 nav ul li{
@@ -81,10 +85,21 @@ nav ul li a:hover::after{
 .header-text h1{
     margin-top: 20px;
     font-size: 60px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
 }
 
 .header-text h1 span{
     color: #ff004f;
+    
+}
+
+.header-text h3{
+    font-size: 30px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.7s;
 }
 
 /*---------------About----------------*/
@@ -342,6 +357,50 @@ nav ul li a:hover::after{
     padding-top: 10px;
 }
 
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 /*--------------Contact-------------*/
 #contact{
     padding: 50px 0;
@@ -451,6 +510,9 @@ nav .fa-solid{
     }
     .header-text h1{
         font-size: 35px;
+    }
+    .header-text h3{
+        font-size: 17px;
     }
     nav .fa-solid{
         display: block;
