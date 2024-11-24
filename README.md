@@ -1,4 +1,4 @@
-# Nilesh Jain Portfolio
+# Nilesh Jain's Portfolio
 
 Welcome to my portfolio repository! This project showcases my skills, experience, and projects as a Full-Stack Developer, Mathematics Wizard, Indian Classical Vocalist and Tabla Maestro. It is designed to provide an overview of my technical expertise and professional journey along with my passion.
 
