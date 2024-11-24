@@ -21,7 +21,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#project">Projects</a></li>
                 <li><a href="#skill">Languages and Frameworks</a></li>
-                <!-- <li><a href="#project">My Passion</a></li> -->
+                <li><a href="index2.html" target="_blank">My Passion</a></li>
                 <li><a href="#contact">Get In Touch</a></li>
                 <li><div class="social-icons">
                     <a href="https://www.linkedin.com/in/nilesh-jain1434/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -41,7 +41,7 @@
         </div>
         <script>
             var typed = new Typed(".profession", {
-                strings:["Full-Stack Developer", "Mathematics Wizard", "Indian Classical Music Singer", "Tabla Maestro"],
+                strings:["Full-Stack Developer", "Mathematics Wizard", "Indian Classical Vocalist", "Tabla Maestro"],
                 typeSpeed:80,
                 backSpeed:80,
                 backDelay:1000,
@@ -88,14 +88,12 @@
                             if (dots.style.display === "none") {
                             dots.style.display = "inline";
                             readMoreBtn.innerHTML = "Read More";
-                            // moreText.style.display = "none";
                             moreText.classList.remove("show");
                             setTimeout(() => (moreText.style.display ="none"), 500);
                             } 
                             else {
                                 dots.style.display = "none";
                                 readMoreBtn.innerHTML = "Read Less";
-                                // moreText.style.display = "inline";
                                 moreText.style.display = "block";
                                 setTimeout(() => moreText.classList.add("show"), 10);
                             }

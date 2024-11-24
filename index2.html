@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music</title>
+    <title>Music Website</title>
     <link rel="stylesheet" href="style2.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -15,10 +15,12 @@
         <a href="#" class="logo">Music</a>
 
         <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Awards & Honors</a>
-            <a href="#">Get In Touch</a>
+            <a href="#" style="--i:1" class="active">Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#services" style="--i:3">Services</a>
+            <a href="#gallery" style="--i:4">Gallery</a>
+            <a href="#awards" style="--i:5">Awards & Honors</a>
+            <a href="#contact" style="--i:6">Get In Touch</a>
         </nav>
     </header>
     <section class="home">
@@ -26,15 +28,116 @@
             <h1 style="margin-bottom: 50px;"><span class="text"></span></h1>
             <h1>Name of Org</h1>
             <h3>By</h3>
-            <h3 style="margin-bottom: 50px;">Nilesh Jain</h3>
+            <h3 style="margin-bottom: 30px;">Nilesh Jain</h3>
             <p>Introduction</p>
             <div class="home-sci">
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-whatsapp' ></i></a>
+                <a href="#" style="--i:9"><i class='bx bxl-instagram'></i></a>
+                <a href="#" style="--i:10"><i class='bx bxl-whatsapp' ></i></a>
             </div>
             <a href="#"><a class="btn-box">More About Me</a>
         </div>
     </section>
+
+    <!---------------- About --------------------->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="Images/user.jpg">
+        </div>
+        <div class="about-text">
+            <h2>About Me</h2>
+            <h4>Hindustani Classical Music Singer</h4>
+            <p>about text description goes here</p>
+
+            <a href="#" class="btn-box">More About Me</a>
+        </div>
+    </section>
+
+    <!---------------- Services --------------------->
+    <section>
+        <div class="services" id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <img src="Images/music.png" alt="tanpura" class="tanpura-image">
+                        <h2>Hindustani Classical Vocal Music</h2>
+                        <p>info about hindustani classical music goes here</p>
+                        <a href="#" class="read">Learn More</a>
+                    </div>
+                    <div>
+                        <img src="Images/tabla.png" alt="tabla" class="tabla-image">
+                        <h2>Tabla</h2>
+                        <p>info about tabla goes here</p>
+                        <a href="#" class="read">Learn More</a>
+                    </div>
+                    <div>
+                        <img src="Images/keyboard.png" alt="keyboard" class="keyboard-image">
+                        <h2>Keyboard/Piano</h2>
+                        <p>info about keyboard/piano goes here</p>
+                        <a href="#" class="read">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---------------- Gallery --------------------->
+    <section>
+        <div class="gallery" id="gallery">
+            <h1 class="sub-title">Gallery</h1>
+        </div>
+    </section>
+
+    <!---------------- Awards & Honors --------------------->
+    <section>
+        <div class="awards" id="awards">
+            <h1 class="sub-title">Awards & Honors</h1>
+        </div>
+    </section>
+
+    <!---------------- Contact --------------------->
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Connect With Me</h2>
+            <!-- <h4></h4> example lets work together -->
+            <p>anything to let people know how to get in touch</p>
+            <div class="contact-list">
+                <li><i class='bx bxs-paper-plane' style='color:#663300'></i>jain.nilesh1203@gmail.com</li>
+                <li><i class='bx bxs-phone' style='color:#663300'></i>+91 93115-51884</li>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form action="">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="text" name="Email" placeholder="Your Email" required>
+                <input type="text" name="Subject" placeholder="Your Subject">
+                <textarea name="Message" cols="40" rows="10" placeholder="Enter Your Message"></textarea>
+                <input type="submit" value="Submit" class="send">
+            </form>
+            <span id="msg"></span>
+        </div>
+    </section>
+
+    <div class="copyright">
+        <p>Copyright © 2024 <b>Nilesh Jain</b> | All Rights Reserved.</p>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
     <script src="main.js"></script>
 </body>
 </html>

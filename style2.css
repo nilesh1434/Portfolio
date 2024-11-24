@@ -7,6 +7,12 @@
 
 body{
     color: #ededed;
+    background-image: url(Images/pattern_background.jpg);
+    background-size:cover;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 .header{
@@ -14,8 +20,8 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
-    background: transparent;
+    padding: 10px 10%;
+    background: #663300;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +31,7 @@ body{
 .logo{
     position: relative;
     font-size: 25px;
-    color: #663300;
+    color: #ebc999;
     text-decoration: none;
     font-weight: 600;
     cursor: default;
@@ -36,13 +42,15 @@ body{
 .navbar a{
     display: inline-block;
     font-size: 25px;
-    color: #663300;
+    color: #ebc999;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
     transition: 0.3s;
     opacity: 0;
     animation: slideTop 0.5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    
 }
 
 .navbar a:hover{
@@ -63,7 +71,11 @@ body{
 }
 
 .home-content{
-    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .home-content h3{
@@ -71,7 +83,7 @@ body{
     font-weight: 700;
     color: #663300;
     opacity: 0;
-    animation: slideBottom 1s ease forwards;
+    animation: slideRight 1s ease forwards;
     animation-delay: 1s;
 }
 
@@ -81,12 +93,16 @@ body{
     margin: -3px 0;
     color: #663300;
     opacity: 0;
-    animation: slideRight 1s ease forwards;
+    animation: slideBottom 1s ease forwards;
     animation-delay: 0.7s;
 }
 
 .home-content p{
     font-size: 20px;
+    color: #663300;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .home-sci a{
@@ -101,6 +117,10 @@ body{
     font-size: 30px;
     color: #663300;
     text-decoration: none;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
     margin: 30px 15px 30px 0;
 }
 
@@ -120,6 +140,11 @@ body{
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #663300,
+    0 0 25px #663300;
 }
 
 .btn-box:hover{
@@ -128,9 +153,272 @@ body{
     0 0 100px #663300, 0 0 200px #663300
 }
 
+.about{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 1.5rem;
+}
+
+.about-img img{
+    padding: 10%;
+    max-width: 600px;
+    height: auto;
+    width: 100%;
+    border-radius:100px;
+}
+
+.about-text h2{
+    font-size: 60px;
+    color: #663300;
+    padding-top: 4rem;
+}
+
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: #663300;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p{
+    color: #663300;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+#services{
+    color: #663300;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.container{
+    padding: 50px;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(259px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div{
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 600;
+    border-right: 10px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px red, 1px 1px 40px pink;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.tabla-image{
+    width:100px;
+    height: auto;
+    margin-bottom: 10px;
+
+}
+
+.tanpura-image{
+    width:100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.keyboard-image{
+    width:100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.services-list div h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: #ebc999;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.read{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #663300;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #ebc999;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #663300,
+    0 0 25px #663300;
+}
+
+.read:hover{
+    box-shadow: 0 0 50px #663300,
+    0 0 25px #663300, 0 0 50px #663300,
+    0 0 100px #663300, 0 0 200px #663300
+}
+
+.services-list div:hover{
+    transform: translateY(-10px);
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* align-items: center; */
+    align-items: start;
+    gap: 3rem;
+    padding-left: 30px;
+    margin-top: 130px;
+}
+
+.contact-text h2{
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+    color: #663300;
+    margin-top: 20px;
+}
+
+.contact-text h4{
+    margin: 15px 0;
+    color: #663300;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contact-text p{
+    text-align: center;
+    color: #663300;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.contact-list{
+    margin-bottom: 3rem;
+}
+
+.contact-list li{
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+
+.contact-list i{
+    display: inline-block;
+    color: #663300;
+    font-size: 30px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.contact-list li a:hover{
+    transform: scale(1.01) translateY(-5px);
+    color: #663300;
+}
+
+.contact-form form{
+    position:relative;
+    margin-top: 100px;
+}
+
+.contact-form form input, form textarea{
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 18px;
+    background: white;
+    color: #000;
+    font-size: 1rem;
+    /* font-weight: 600; */
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 220px;
+}
+
+.contact-form form .send{
+    display: inline-block;
+    padding: 14px 60px;
+    background: #663300;
+    border-radius: 40px;
+    font-size: 18px;
+    color: #ebc999;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #663300,
+    0 0 25px #663300;
+}
+
+.contact-form form .send:hover{
+    box-shadow: 0 0 50px #663300,
+    0 0 25px #663300, 0 0 50px #663300,
+    0 0 100px #663300, 0 0 200px #663300
+}
+
+#msg {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    color: #ebc999;
+    background: #663300;
+    font-weight: 300;
+    margin-top: 50px;
+    margin-bottom: -80px;
+}
+
 @keyframes slideRight{
     0%{
         transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
         opacity: 0;
     }
     100%{
