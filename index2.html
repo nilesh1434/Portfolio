@@ -12,6 +12,37 @@
 </head>
 <body>
     <header class="header">
+        <audio autoplay loop id="background-music">
+            <source src="Music/bgmusic.mp3" type="audio/mpeg">
+        </audio>
+
+        <button id="music-toggle">Play Music</button>
+
+        <script>
+            const audio = document.getElementById('background-music');
+            const button = document.getElementById('music-toggle');
+            const icon = document.getElementById('toggle-icon');
+
+            // button.textContent = 'Mute Music';
+
+            window.addEventListener('DOMContentLoaded', () => {
+            audio.muted = false; // Unmute the audio
+            // audio.play().catch(error => console.log("Autoplay blocked by browser:", error)); // Attempt to play
+            });
+            
+            // Toggle music playback and button text
+            button.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                    button.textContent = 'Mute Music';
+                    // button.textContent = 'Mute Music';
+                } else {
+                    audio.pause();
+                    // <i class="fa-solid fa-volume-high"></i>
+                    button.textContent = 'Play Music';
+                }
+            });
+        </script>
         <a href="#" class="logo">Music</a>
 
         <nav class="navbar">
