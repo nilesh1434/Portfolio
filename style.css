@@ -481,6 +481,11 @@ form .btn2{
     margin-top: 20px;
 }
 
+.calendly-inline-widget {
+    background-color: black; /* Matches your Calendly background_color */
+    border: none; /* Optional: Remove border */
+}
+
 .copyright{
     width: 100%;
     text-align: center;
