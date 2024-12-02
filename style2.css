@@ -39,6 +39,21 @@ html{
     animation: slideRight 1s ease forwards;
 }
 
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
 .navbar a{
     display: inline-block;
     font-size: 25px;
@@ -285,6 +300,20 @@ html{
 
 .services-list div:hover{
     transform: translateY(-10px);
+}
+
+#gallery{
+    color: #663300;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+#awards{
+    color: #663300;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
 }
 
 .contact{

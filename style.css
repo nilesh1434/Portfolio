@@ -101,6 +101,7 @@ nav ul li a:hover::after{
 }
 
 /*---------------About----------------*/
+
 #about{
     padding: 50px 0;
     color: #ababab;
@@ -209,6 +210,7 @@ nav ul li a:hover::after{
 }
 
 /*-----------------Project----------------*/
+
 #project{
     padding: 50px 0;
 }
@@ -225,10 +227,6 @@ nav ul li a:hover::after{
     position: relative;
     overflow: hidden;
     display: none;
-    /* opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.5s ease, max-height 0.5s ease; */
 }
 
 .work.show{
@@ -326,6 +324,7 @@ nav ul li a:hover::after{
 }
 
 /*--------------Skill---------------*/
+
 #skill{
     padding: 50px 0;
 }
@@ -400,6 +399,7 @@ nav ul li a:hover::after{
 }
 
 /*--------------Contact-------------*/
+
 #contact{
     padding: 50px 0;
 }
@@ -442,7 +442,6 @@ nav ul li a:hover::after{
 
 .btn.btn2{
     text-align: center;
-    /* width:min-content; */
     display: inline-block;
     background: #ff004f;
     display: flex;
